@@ -1,30 +1,19 @@
-# The-Making-of-the-Atomic-Bomb
-I discuss the neutron diffusion equation and, in particular, its applications in the
-building of the Nuclear Weapons.
-I consulted the paper of Graham Griffiths (2018), Neutron diffusion, 
-URL https: //www.researchgate.net/publication/323035158 Neutron diffusion and the book
-Reed, B. C. (2015), The Physics of the Manhattan project, Springer-Verlag, 
-Berlin Heidelberg, 3rd Ed.
-The paper is a .pdf file named "The Making of the Atomic Bomb.pdf", in which is written
-the whole theory and are shown the results of the various calculations.
-Every codes are written in C++.
-Each of the folders contains a README file, which explain step-by-step what is made in
-that context a .cpp file that can be compiled with any compilator (personally I have 
-used Virtual Studio 2022) and a Windows executable file (.exe) which allows to a Windows 
-user to run directly the code; moreover, the folders, which follow the order of the 
-paper contents (except for the last one, which provides documentation of the used 
-bisection method), are provided of data, directly streamed by the .exe file and most 
-of them contain also a .mlx file, that can be opened with MATLAB, and selecting the 
-directory where the relative file is located, it will furnish a plot.
-The C++ libraries which are used in the whole project are 5:
--iostream, declares objects that control reading from and writing to the standard 
- streams. This include is often the only header you need to do input and output from 
- a C++ program;
--cmath, provides the most used mathematical functions;
--ctime, contains definitions of functions to get and manipulate date and time
- information;
--chrono, which elements deal with time. In particular, we use it to measure durations;
--fstream, allows to print in a file the desired quantities.
-I often specify the functions needed outside the main.
-
-Francesco De Stefano.
+# 1.1.3 Three-Dimensional Cartesian case
+The code is stored in "3D Cartesian case.cpp" file.
+The Windows executable file is "3D Cartesian case.exe".
+First, the code calculate the critical lenght and then output it and the chosen 
+lenght, being sure that the used lenght is bigger than the critical one.
+Moreover, it calculate and output the critical mass.
+Then, we have calculated the coefficients of the neutron density function, starting
+from an initial distribution satisfying Dirichlet boundary conditions: so we calculate
+directly the values of the coefficients, since the integration can be made exactly,
+and they are stored in the text file "a.txt".
+Thus, we have calculated the neutron density function in very near space-time points, 
+storing the values of the neutron density function with the 
+corresponding space and time point values in the "n.txt" file, and then we have also 
+calculated the neutron density function at a fixed time t and fixed height z, storing 
+the corresponding values at various space points in the "nfix.txt" file; 
+hence, one can run the countour plot of this last function opening 
+contourplot "n(x,y).mlx" on MATLAB, after having inserted the directory of "nfix.txt" file.
+For simplicity, the relevant used functions are putted (and so defined) outside the
+main.
