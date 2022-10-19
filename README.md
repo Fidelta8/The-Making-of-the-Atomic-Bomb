@@ -20,11 +20,17 @@ The C++ libraries which are used in the whole project are 5:
 -iostream, declares objects that control reading from and writing to the standard 
  streams. This include is often the only header you need to do input and output from 
  a C++ program;
+ 
 -cmath, provides the most used mathematical functions;
+
 -ctime, contains definitions of functions to get and manipulate date and time
  information;
+ 
 -chrono, which elements deal with time. In particular, we use it to measure durations;
--fstream, allows to print in a file the desired quantities.
+
+-fstream, allows to print in a file the desired quantities, and the files will be
+generated in the same directory of the executable file.
+
 I often specify the functions needed outside the main.
 
 Francesco De Stefano.
