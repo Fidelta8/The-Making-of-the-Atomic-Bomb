@@ -8,8 +8,8 @@ Berlin Heidelberg, 3rd Ed.
 The paper is a .pdf file named "The Making of the Atomic Bomb.pdf", in which is written
 the whole theory and are shown the results of the various calculations.
 Every codes are written in C++.
-Each of the folders contains a README file, which explain step-by-step what is made in
-that context a .cpp file that can be compiled with any compilator (personally I have 
+Each of the folders/branches contains a README file, which explain step-by-step what is made in
+that context, a .cpp file that can be compiled with any compilator (personally I have 
 used Virtual Studio 2022) and a Windows executable file (.exe) which allows to a Windows 
 user to run directly the code; moreover, the folders, which follow the order of the 
 paper contents (except for the last one, which provides documentation of the used 
