@@ -1,30 +1,23 @@
-# The-Making-of-the-Atomic-Bomb
-I discuss the neutron diffusion equation and, in particular, its applications in the
-building of the Nuclear Weapons.
-I consulted the paper of Graham Griffiths (2018), Neutron diffusion, 
-URL https: //www.researchgate.net/publication/323035158 Neutron diffusion and the book
-Reed, B. C. (2015), The Physics of the Manhattan project, Springer-Verlag, 
-Berlin Heidelberg, 3rd Ed.
-The paper is a .pdf file named "The Making of the Atomic Bomb.pdf", in which is written
-the whole theory and are shown the results of the various calculations.
-Every codes are written in C++.
-Each of the folders contains a README file, which explain step-by-step what is made in
-that context a .cpp file that can be compiled with any compilator (personally I have 
-used Virtual Studio 2022) and a Windows executable file (.exe) which allows to a Windows 
-user to run directly the code; moreover, the folders, which follow the order of the 
-paper contents (except for the last one, which provides documentation of the used 
-bisection method), are provided of data, directly streamed by the .exe file and most 
-of them contain also a .mlx file, that can be opened with MATLAB, and selecting the 
-directory where the relative file is located, it will furnish a plot.
-The C++ libraries which are used in the whole project are 5:
--iostream, declares objects that control reading from and writing to the standard 
- streams. This include is often the only header you need to do input and output from 
- a C++ program;
--cmath, provides the most used mathematical functions;
--ctime, contains definitions of functions to get and manipulate date and time
- information;
--chrono, which elements deal with time. In particular, we use it to measure durations;
--fstream, allows to print in a file the desired quantities.
-I often specify the functions needed outside the main.
-
-Francesco De Stefano.
+# 2 The effect of a Tamper
+The code is stored in "Tamper Effect.cpp" file.
+The Windows executable file is "Tamper Effect.exe".
+First, after having set the various constants, there is the determination of the 
+critical radius via bisection method.
+Then, there is the output of the new critical mass of the bomb which is sorrounded by
+a tamper, specifying the radius of the core and of the tamper and the entire mass of
+the bomb (core+tamper).
+Moreover, in order to try to graph the behaviour of the core critical mass as function
+of the tamper additive mass, we have explicitated the tamper radius as function of 
+core radius (which is a double-valued function), and then the tamper mass as function 
+of the core mass, and we have calculated such function in very near space points,
+considering only the minus-valued function because the other case leads to a undesired 
+negative masses and, moreover, we have started from a point after the asymptot that
+the tamper radius function has when taken the minus.
+The values of this calculation are stored in the "mass.txt" text file in order to 
+allow the user which open "plot(m_tamp, m_core).mlx" file with MATLAB, ensuring
+that the same directory of "mass.txt" file is opened in it, to plot the relevant 
+dependence of the tamper mass to critical core mass (and viceversa), that one
+with the decreasing values of the critical mass when the tamper mass is 
+increasing.
+For simplicity, the relevant used functions are putted (and so defined) outside the
+main.
