@@ -1,0 +1,11 @@
+Quantity , Physical meaning , Value Unit
+rcrit , Critical radius , 0.0836311 m
+ri , Initial radius , 0.0957338 m
+rseccrit , Radius at crit. shutdown , 0.102427 m
+deltar , Expansion radius , 0.00669305 m
+eff , Efficiency , 0.0102404 %
+Pfin , Pressure at crit. shutdown , 4.71903e+15 Pa
+Y , Yield (Energy released at crit. shutdown) , 15.2304 kt
+tfiss , Time needed to fission all nuclei , 1.66883e-06 s
+tseccrit , Time to crit. shutdown , 1.5398e-06 s
+Yf , Hypothetical Yield (Fermi) , 10.4858 kt
